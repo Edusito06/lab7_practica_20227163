@@ -1,0 +1,19 @@
+<resources>
+    <!-- Tema de la app -->
+    <style name="Theme.Lab6" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">#1E4FA3</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#1E4FA3</item>
+        <item name="android:colorBackground">#F3F5F9</item>
+        <item name="android:statusBarColor">#1E4FA3</item>
+    </style>
+
+    <!-- Tema para las pantallas de Firebase UI -->
+    <style name="Theme.Lab6.Auth" parent="FirebaseUI.DefaultMaterialTheme">
+        <item name="colorPrimary">#1E4FA3</item>
+        <item name="colorPrimaryVariant">#163C7D</item>
+        <item name="colorAccent">#1E4FA3</item>
+        <item name="colorSecondary">#1E4FA3</item>
+        <item name="android:statusBarColor">#1E4FA3</item>
+    </style>
+</resources>

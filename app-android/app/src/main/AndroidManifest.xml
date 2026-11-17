@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab6"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="34">
+
+        <!-- 1) Inicio de sesion (Firebase UI con layout personalizado) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2) Lista de sesiones de estudio -->
+        <activity android:name=".HomeActivity" />
+
+        <!-- 3) Agregar / editar sesion -->
+        <activity android:name=".SesionActivity" />
+
+        <!-- 4) Graficos -->
+        <activity android:name=".ChartsActivity" />
+    </application>
+</manifest>

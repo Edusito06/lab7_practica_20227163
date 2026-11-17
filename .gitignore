@@ -1,0 +1,15 @@
+# Maven
+target/
+
+# Android / Gradle
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Sistema
+.DS_Store

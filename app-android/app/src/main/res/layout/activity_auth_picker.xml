@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout personalizado para Firebase UI (AuthMethodPickerLayout) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:contentDescription="Logo de la aplicación"
+        android:src="@drawable/ic_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Horas de Estudio"
+        android:textColor="#1E4FA3"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="Inicia sesión o crea tu cuenta para registrar tus sesiones de estudio" />
+
+    <!-- Con correo: Firebase UI muestra iniciar sesion, registrarse
+         y "¿Problemas para acceder?" (recuperar contrasena) -->
+    <Button
+        android:id="@+id/btnCorreo"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Ingresar con correo electrónico" />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:text="Ingresar con Google" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="¿No tienes cuenta? Ingresa tu correo y te pediremos crearla.\n¿Olvidaste tu contraseña? Ingresa tu correo y elige «¿Problemas para acceder?»"
+        android:textSize="12sp" />
+</LinearLayout>

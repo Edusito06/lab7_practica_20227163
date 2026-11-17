@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: servicio-estadisticas
+
+server:
+  # 0.0.0.0 por defecto: el emulador entra por http://10.0.2.2:8020
+  port: 8020
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    # Refresca la lista de instancias cada 5 s (por defecto 30 s) para ver antes los cambios
+    registry-fetch-interval-seconds: 5
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+
+# Circuit breaker (Resilience4j): si falla el 50% de las ultimas 6 llamadas,
+# se abre 10 s y responde directo el fallback sin llamar a servicio-horas.
+resilience4j:
+  circuitbreaker:
+    instances:
+      servicio-horas:
+        sliding-window-size: 6
+        minimum-number-of-calls: 3
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+  timelimiter:
+    instances:
+      servicio-horas:
+        timeout-duration: 3s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Servicio de estadisticas (consumidor con Feign)
+    autor: 20227163
